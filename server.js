@@ -14,6 +14,7 @@ connectDB();
 
 // Router Files
 const bootcamps = require('./routes/bootcamps');
+const courses = require('./routes/courses');
 
 // Initialize Application
 const app = express();
@@ -28,6 +29,7 @@ if (process.env.NODE_ENV === 'development') {
 
 // Bootcamp roters
 app.use('/api/v1/bootcamps', bootcamps)
+app.use('/api/v1/courses', courses)
 
 // Custom Error Handler
 app.use(errorHandler);
